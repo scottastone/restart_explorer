@@ -1,15 +1,18 @@
 use std::{process, thread, time::Duration};
 
 fn main() {
-    /* Very simple program that kills explorer.exe and restarts it.
+    /* 
+    Very simple program that kills explorer.exe and restarts it.
+    Only supports windows
      */  
-    // Check if we are running windows
     if cfg!(target_os = "windows") {
         println!("Running on Windows");
     } else {
         println!("Not running on Windows, exiting..");
         return;
     }
+
+    // Kill explorer.exe
     process::Command::new("taskkill.exe")
         .arg("/f")
         .arg("/im")
@@ -20,6 +23,7 @@ fn main() {
     println!("Killed explorer.exe, restarting in 1 seconds..");
     thread::sleep(Duration::from_secs(1));
 
+    // Start explorer.exe
     process::Command::new("explorer.exe")
         .spawn()
         .expect("Could not start explorer.exe");
