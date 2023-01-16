@@ -1,3 +1,4 @@
+// Copyright (c) 2022 Scott Stone <scott.allan.stone@gmail.com>
 use std::{process, thread, time::Duration};
 
 fn main() {
