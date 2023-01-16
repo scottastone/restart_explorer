@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "restart_explore"
+name = "restart_explorer"
 version = "0.1.0"

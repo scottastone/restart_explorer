@@ -1,5 +1,5 @@
 [package]
-name = "restart_explore"
+name = "restart_explorer"
 version = "0.1.0"
 edition = "2021"
 
